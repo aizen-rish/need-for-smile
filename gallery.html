@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Share A Smile</title>
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--Css files importing-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js files importing-->
+<script src="js/jquery.min.js"></script>
+
+
+
+</head>	
+<body>
+
+
+	<div class="header">	
+			<div class="logo">
+			   <a href="index.html">Share A Smile
+			        </a>
+			</div>
+			<div class="top-nav">
+				<span class="menu">Menu</span>
+				<ul class="nav">
+					<li class="active"><a class="index.html">Home</a></li>
+					<li><a class="scroll" href="Aboutus.html" >About Us</a></li>
+					<li><a class="scroll" href="ourteam.html" >Our Family</a></li>
+					<li><a class="scroll" href="ourservices.html" > Services</a></li>
+					<li><a class="scroll" href="gallery.html" >Gallery</a></li>
+					<li><a class="scroll" href="contact.html" >Contact</a></li>
+				</ul>
+						
+						 <script>
+						   $( "span.menu" ).click(function() {
+							 $( "ul.nav" ).slideToggle( 300, function() {
+							 
+							  });
+							 });
+						</script>
+						
+			</div>
+<body>
+<div class="dummy"> </div>
+				</div>
+	<h1 style = " font-family:Shadows Into Light; color :#069 ;" >Image slider</h1>
+	<div >
+
+		<div id = "slider">
+			<img src = "image4.jpg" id = "image">
+			<div class = "left_hold"><img src = "al.jpg" id = "left" onclick = "photo(-1)"></div>
+			<div class = right_hold><img src = "ar.jpg" id = "right" onclick = "photo(1)"></div>
+		</div>
+	</div>	
+
+	<script>
+		var imageCount = 1;
+		var total = 4;
+
+		function photo(x)
+		 {
+			var image = document.getElementById('image');
+			imageCount = imageCount + x;
+			if(imageCount > total){imageCount = 1;}
+			if(imageCount < 1){imageCount = total;}	
+			image.src = "image"+ imageCount +".jpg";
+		}
+	
+		window.setInterval(function photoA() 
+		{
+			var image = document.getElementById('image');
+			imageCount = imageCount + 1;
+			if(imageCount > total){imageCount = 1;}
+			if(imageCount < 1){imageCount = total;}	
+			image.src = "image"+ imageCount +".jpg";
+		},3000);
+
+	</script>
+	<!-- footer -->
+	<div class="footer">
+		<div class="footer-grids">
+		  <div class="container">
+			  <div class="col-md-3 footer-grid">
+					<h4>Services</h4>
+					<ul>
+						<li><a href="#">rerum hic tenetur</a></li>
+						<li><a href="#">molestiae non recusandae</a></li>
+						<li><a href="#">voluptates repudiandae</a></li>
+						<li><a href="#">necessitatibus saepe</a></li>
+						<li><a href="#">debitis aut rerum</a></li>
+					</ul>
+			  </div>
+			 <div class="col-md-3 footer-grid">
+					<h4>Information</h4>
+				   <ul>
+						<li><a href="#">quibusdam et aut</a></li>
+						<li><a href="#">Testimonals</a></li>
+						<li><a href="#">Archives</a></li>
+						<li><a href="#">Our Staff</a></li>
+				  </ul>
+			 </div>
+			 <div class="col-md-3 footer-grid">
+					<h4>More details</h4>
+					<ul>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms &amp; Condition</a></li>
+						<li><a href="#">Site map</a></li>
+					</ul>
+			 </div>
+			 <div class="col-md-3 footer-grid contact-grid">
+					<h4>Contact us</h4>
+					<ul>
+						<li><span class="c-icon"> </span>Newyork Still Road.</li>
+						<li><span class="c-icon1"> </span><a href="mailto:info@example.com">mail@example.com</a></li>
+						<li><span class="c-icon2"> </span>756 gt globel Place</li>
+					</ul>
+					<ul class="social-icons">
+						<li><a href="#" class="facebook"> </a></li>
+						<li><a href="#" class="p"> </a></li>
+						<li><a href="#" class="t"> </a></li>
+					</ul>
+			 </div>
+			 <div class="dummy"></div>
+		 </div>
+		</div>
+	</div>
+	<div class="copy">
+		 <p>Copyright © 2015 Share A Smile. All rights reserved |</a></p>
+	</div>
+</body>
+</html>

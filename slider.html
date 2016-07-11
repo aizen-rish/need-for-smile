@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<h1 style = " font-family:Shadows Into Light; color :#069 ;" >Image slider</h1>
+	<div >
+
+		<div id = "slider">
+			<img src = "image4.jpg" id = "image">
+			<div class = "left_hold"><img src = "al.jpg" id = "left" onclick = "photo(-1)"></div>
+			<div class = right_hold><img src = "ar.jpg" id = "right" onclick = "photo(1)"></div>
+		</div>
+	</div>
+
+	<script>
+		var imageCount = 1;
+		var total = 4;
+
+		function photo(x)
+		 {
+			var image = document.getElementById('image');
+			imageCount = imageCount + x;
+			if(imageCount > total){imageCount = 1;}
+			if(imageCount < 1){imageCount = total;}	
+			image.src = "image"+ imageCount +".jpg";
+		}
+	
+		window.setInterval(function photoA() 
+		{
+			var image = document.getElementById('image');
+			imageCount = imageCount + 1;
+			if(imageCount > total){imageCount = 1;}
+			if(imageCount < 1){imageCount = total;}	
+			image.src = "image"+ imageCount +".jpg";
+		},3000);
+
+	</script>
+</body>
+</html>
